@@ -25,12 +25,17 @@ iframe {
     overflow: hidden;
 }
 
+.kenshin {
+    margin-left: 550px;
+    padding-top: 15px;
+}
+
 .userinfo {
     height: 60px;
     line-height: 60px;
     text-align: center;
-    font-size: 12px;
-    font-weight: 300;
+    font-size: 14px;
+    font-weight: 200;
     /* 禁止选中文字 */
     user-select: none;
 }
