@@ -30,6 +30,8 @@ iframe {
     line-height: 60px;
     text-align: center;
     font-size: 12px;
+    font-weight: 300;
+    /* 禁止选中文字 */
     user-select: none;
 }
 
@@ -51,6 +53,7 @@ iframe {
     line-height: 40px;
     text-align: center;
     font-size: 20px;
+    font-weight: 200;
     color: #fff;
     position: relative;
     top: 4px;
