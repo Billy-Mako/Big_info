@@ -21,7 +21,7 @@ function getUser() {
             }
             // 若请求成功, 调用 renderAvatar 渲染用户的头像
             renderAvatar(res.data);
-        }
+        },
     })
 }
 
@@ -48,3 +48,7 @@ function renderAvatar(user) {
             .show()
     }
 }
+// 给 退出 按钮绑定事件
+$('#logout').on('click', function() {
+
+})
