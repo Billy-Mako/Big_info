@@ -5,10 +5,10 @@ $(function() {
     var $image = $('#image');
     // 1.2 配置选项
     const options = {
-        // 纵横比
+        // 纵横比 设置为 1:1
         aspectRatio: 1,
         // 指定预览区域
-        preview: '.img-preview'
+        preview: '.preview',
     }
 
     // 1.3 创建裁剪区域
@@ -25,7 +25,7 @@ $(function() {
         // 获取用户选择的文件
         var filelist = e.target.files
         if (filelist.length === 0) {
-            return layer.msg('请选择照片！')
+            return layer.msg('请选择照片！');
         }
         // 1. 拿到用户选择的文件
         var file = e.target.files[0];
