@@ -30,7 +30,7 @@ function renderAvatar(user) {
     // 1. 获取用户的名称 [进行判断优先级]
     var name = user.nickname || user.username;
     // 2. 设置欢迎的文本内容
-    $('#welcome').html('欢迎&nbsp;&nbsp;' + name + '&nbsp;我的宝贝!');
+    $('#welcome').html('欢迎&nbsp;&nbsp;' + name + '&nbsp;!');
     // 3. 按需渲染用户的头像
     if (user.user_pic !== null) {
         // 若用户有具体的图片头像, 则优先渲染 图片头像
