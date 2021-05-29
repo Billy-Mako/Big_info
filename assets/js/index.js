@@ -30,7 +30,7 @@ function renderAvatar(user) {
     // 1. 获取用户的名称 [进行判断优先级]
     var name = user.nickname || user.username;
     // 2. 设置欢迎的文本内容
-    $('#welcome').html('欢迎&nbsp;&nbsp;[ ' + name + ' ]&nbsp;&nbsp;!');
+    $('#welcome').html('欢迎&nbsp;&nbsp;' + name + '&nbsp;&nbsp;!');
     // 3. 按需渲染用户的头像
     if (user.user_pic !== null) {
         // 若用户有具体的图片头像, 则优先渲染 图片头像
@@ -53,12 +53,11 @@ var layer = layui.layer
 $('#logout').on('click', function() {
     // 提示用户是否确认退出
     layer.confirm('确定退出登录?', { icon: 3, title: '提示' }, function(index) {
-        // 1. 清空本地存储中的 token
-        localStorage.removeItem('token')
-            // 2. 重新跳转到登录页面
-        location.href = 'login.html'
-
-        // 关闭 confirm 询问框
-        layer.close(index)
+        // 1.清空本地存储中的 token
+        localStorage.removeItem('token');
+        // 2.重新跳转到登录页面
+        location.href = 'login.html';
+        // 3.关闭 confirm 询问框
+        layer.close(index);
     })
 })
