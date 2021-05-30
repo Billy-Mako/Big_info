@@ -1,14 +1,16 @@
 $(function() {
     var layer = layui.layer;
     var form = layui.form;
-    // 定义一个查询的参数对象，将来请求数据的时候，
-    // 需要将请求参数对象提交到服务器
+    var laypage = layui.laypage;
+
+    // 定义一个查询的参数对象，将来请求数据的时候，需要将请求参数对象提交到服务器
     var q = {
         pagenum: 1, // 页码值，默认请求第一页的数据
-        pagesize: 3, // 每页显示几条数据，默认每页显示3条
+        pagesize: 2, // 每页显示几条数据，默认每页显示3条
         cate_id: '', // 文章分类的 Id
         state: '' // 文章的发布状态{已发布, 草稿}
     };
+
     // ----------------------调用 获取文章列表数据 方法-----------------------
     initTable();
     // -----------------发起请求获取并渲染文章分类的下拉选择框-----------------
@@ -94,7 +96,7 @@ $(function() {
             // count 总条目区域   limit 条目选项区域   prev 上一页区域
             // page 分页区域   next 下一页区域   skip 快捷跳页
             layout: ['count', 'limit', 'prev', 'page', 'next', 'skip'],
-            limits: [2, 3, 5, 8],
+            limits: [2, 4, 6, 8],
             // 分页发生切换的时候，触发 jump 回调
             // 触发 jump 回调的方式有两种：
             // 触发jump回调的方式有两种:
